@@ -49,6 +49,8 @@ subject: Home
       <div class="collection with-header">
         <h6 class="collection-header deep-purple darken-4">Choose your subject:</h6> {% for menu in subject_menu %}
         <a href="{{ menu.url }}" class="collection-item truncate waves-effect{% if page.url == menu.url %} active{% endif %}"><i class="material-icons left">{{ menu.icon }}</i>{{ menu.title }}</a> {% endfor %}
+        <a href="http://beta.jasonsclassroom.com" class="collection-item truncate waves-effect">
+          <i class="material-icons left">fiber_new</i>Jason's Classroom v2.0</a>
       </div>
     </div>
   </div>
