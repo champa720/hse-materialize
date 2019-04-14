@@ -10,13 +10,14 @@ tag: empty
 
 icon: book
 
-library:
--
-  category: "Poetry"
-  cover_image: "poetry.jpg"
-  excerpt: ""
--
-  category: "Fiction"
-  cover_image: "default.jpg"
-  excerpt: ""
+# library:
+# -
+  # category: "Poetry"
+  # cover_image: "poetry.jpg"
+  # excerpt: ""
+# -
+  # category: "Fiction"
+  # cover_image: "default.jpg"
+  # excerpt: ""
+
 ---
