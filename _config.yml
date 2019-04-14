@@ -25,6 +25,7 @@ kramdown:
 plugins:
   - jekyll-feed
   - jekyll-github-metadata
+  - jekyll-redirect-from
 exclude:
   - Gemfile
   - Gemfile.lock

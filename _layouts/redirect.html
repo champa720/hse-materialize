@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting&hellip;</title>
+  <link rel="canonical" href="{{ page.redirect.to }}">
+  <!--script>location="{{ page.redirect.to }}"</script-->
+  <meta http-equiv="refresh" content="3; url={{ page.redirect.to }}">
+  <meta name="robots" content="noindex">
+</head>
+
+<style>
+  body {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color:rgba(0,0,0,.87);
+  }
+
+  h1, p {
+    margin: 0 2rem 1rem;
+    font-family: sans-serif;
+    color: white;
+  }
+
+  a {
+    color: #e91e63;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @media (max-width: 599px) {
+    body {
+      flex-direction: column;
+    }
+
+    div {
+      text-align: center;
+    }
+  }
+</style>
+
+<body>
+
+  <a href="{{ page.redirect.to }}">
+    <img src="http://beta.jasonsclassroom.com/assets/img/icon/feather.svg" aria-hidden="true">
+  </a>
+  <div>
+    <h1>{{ site.title }}</h1>
+    <p>{{ site.description }}</p>
+  </div>
+
+  <script type="text/JavaScript">
+    setTimeout(function () {
+        window.location.href = "{{ page.redirect.to }}";
+      }, 3000);
+    </script>
+
+</body>
+
+</html>
