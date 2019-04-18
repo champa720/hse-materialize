@@ -36,6 +36,27 @@
     width: 100%;
   }
 
+  .mdc-linear-progress {
+    position: relative;
+    height: 4px;
+    width: 100%;
+    background-color: #e6e6e6;
+  }
+  .mdc-linear-progress__bar {
+    animation: fill 3s linear 1;
+    height: 100%;
+    background-color: #e91e63;
+  }
+
+  @keyframes fill {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
   @media (max-width: 599px) {
     body {
       flex-direction: column;
@@ -50,18 +71,22 @@
 <body>
 
   <a href="{{ page.redirect.to }}">
-    <img src="http://beta.jasonsclassroom.com/assets/img/icon/feather.svg" aria-hidden="true">
+    <img src="{{ 'assets/img/icon/feather.svg' | absolute_url }}" aria-hidden="true">
   </a>
   <div>
     <h1>{{ site.title }}</h1>
     <p>{{ site.description }}</p>
+    <div role="progressbar" class="mdc-linear-progress">
+      <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+      </div>
+    </div>
   </div>
 
   <script type="text/JavaScript">
     setTimeout(function () {
-        window.location.href = "{{ page.redirect.to }}";
-      }, 3000);
-    </script>
+      window.location.href = "{{ page.redirect.to }}";
+    }, 3000);
+  </script>
 
 </body>
 
